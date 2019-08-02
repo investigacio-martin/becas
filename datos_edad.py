@@ -11,7 +11,7 @@ pdf.add_page()
 lista_sucia = []
 data = pd.read_excel (r'BasedeDatos.xlsx')
 df = pd.DataFrame(data, columns= ['EDAD'])
-
+  
 mylist = df.values.tolist()
 
 for i in range (0, 30):
@@ -44,7 +44,6 @@ pdf.set_font("Arial", size=18)
 pdf.cell(200, 10, "La media es: " + media, ln=3, align="C")
 pdf.cell(200, 10, "La moda es: " + moda, ln=5, align="C")
 pdf.cell(200, 10, "La desviacion estandar es: " + desviacion, ln=7, align="C")
-pdf.output("simple_demo.pdf")
+pdf.output("pdf/dato-edad.pdf")
 
 plt.show()
-
